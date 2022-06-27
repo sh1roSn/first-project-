@@ -47,4 +47,26 @@
   }
     detectPersonalLevel();
 
- console.log(personalMovieDB);
+    function showMyDB(hidden) {
+      if (!hidden) {
+        console.log(personalMovieDB);
+      }
+
+    }
+
+    function writeYourGenres() {
+      for (let i = 0; i < 3; i++) {
+        const favouriteGenre = prompt(`You ${i} favourite genre?`, '');
+        if (favouriteGenre !== null && favouriteGenre !== ''){
+          personalMovieDB.genres[i - 1] = favouriteGenre;
+          console.log('done');
+        } else {
+          console.log('error');
+          i--;
+        }
+      }
+    }
+
+    writeYourGenres();
+
+    showMyDB(personalMovieDB.privat);
