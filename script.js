@@ -55,7 +55,7 @@
     }
 
     function writeYourGenres() {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 1; i <= 3; i++) {
         const favouriteGenre = prompt(`You ${i} favourite genre?`, '');
         if (favouriteGenre !== null && favouriteGenre !== ''){
           personalMovieDB.genres[i - 1] = favouriteGenre;
